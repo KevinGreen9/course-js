@@ -13,6 +13,22 @@ const isVerifiedUser = true
 const hasSpecialPermission = true
 const hasTemporaryPass = false
 
-let isAccess
+let isAccess= prompt("Ваш уровень доступа!?", '');
 
-// your code
+
+if(isAccess === isAdmin || isVerifiedUser) {
+    alert('Добро пожаловать!');
+    let pass = prompt("У вас есть специальное разрешение?", '')
+    if(pass === hasSpecialPermission || hasTemporaryPass){
+alert('Проверка пройдена!');
+    }  else if(pass === '' || pass === null) {
+        alert('Попробуйте снова!')
+    } else {
+        alert('Охранааа!!!!')
+    }
+} else if(isAccess === ''|| isAdmin || null) {
+    alert("Попробуйте снова!'")
+} else {
+    alert('Доступ закрыт!');
+}
+console.log(isAccess)

@@ -10,15 +10,15 @@ const score = 100 // тестовое значение, можно изменя�
 
 let grade = Math.floor(Math.random() * score);
 if(grade <= 49){
-    alert('Your grade is  F')
+grade = 'F'
 } else if(grade <= 69){
-    alert('Your grade is D')
+    grade = 'D'
 } else if(grade <= 79){
-    alert('Your grade is C')
+    grade = 'C'
 } else if(grade <= 89){
-    alert('Your grade is  B')
+    grade = 'B'
 }
 else if(grade <= 100){
-    alert('Your grade is A')
+    grade = 'A'
 }
 console.log(grade)

@@ -8,29 +8,29 @@
     // your code
     let count = 0
     
-    while (count < 5) {
-        let grade = Math.floor(Math.random() * score);
-        
-        if (grade <= 49) {
-            console.log('F')
-            count++
-            
-        } else if (grade <= 69) {
-            console.log('D')
-            count++
+while (count < 5) {
+    let grade = Math.floor(Math.random() * score);
 
-        } else if (grade <= 79) {
-            console.log('C')
-            count++
-            
-        } else if (grade <= 89) {
-            console.log('B')
-            count++
-            
-        } else if (grade <= 100) {
-            console.log('A')
-            count++
+    if (grade <= 49) {
+        grade = 'F'
+        count++
 
-        }
+    } else if (grade <= 69) {
+        grade = 'D'
+        count++
+
+    } else if (grade <= 79) {
+     grade = 'C'
+        count++
+
+    } else if (grade <= 89) {
+        grade = 'B'
+        count++
+
+    } else if (grade <= 100) {
+        grade = 'A'
+        count++
 
     }
+
+}

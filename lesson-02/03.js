@@ -8,16 +8,25 @@ const score = 100 // тестовое значение, можно изменя�
 // your code
 
 
-let grade = Math.floor(Math.random() * score);
-if(grade <= 49){
-    console.log('F')
-} else if(grade <= 69){
-    console.log('D')
-} else if(grade <= 79){
-    console.log('C')
-} else if(grade <= 89){
-    console.log('B')
+let grade
+
+if (score <= 49) {
+    grade = 'F'
+
+} else if (score <= 69) {
+    grade = 'D'
+
+} else if (score <= 79) {
+    grade = 'C'
+
+
+} else if (score <= 89) {
+    grade = 'B'
+
+
+} else if (score <= 100) {
+    grade = 'A'
+
+
 }
-else if(grade <= 100){
-    console.log('A')
-}
+console.log(grade)

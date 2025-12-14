@@ -4,27 +4,33 @@
  * Результат сохраните в переменной grade.
  */
 
-const score = 100 // тестовое значение, можно изменять
-// your code
+ const score = 100 // тестовое значение, можно изменять
+    // your code
+    let count = 0
+    
+    while (count < 5) {
+        let grade = Math.floor(Math.random() * score);
+        
+        if (grade <= 49) {
+            console.log('F')
+            count++
+            
+        } else if (grade <= 69) {
+            console.log('D')
+            count++
 
+        } else if (grade <= 79) {
+            console.log('C')
+            count++
+            
+        } else if (grade <= 89) {
+            console.log('B')
+            count++
+            
+        } else if (grade <= 100) {
+            console.log('A')
+            count++
 
-let grade
+        }
 
-    let exam = Math.floor(Math.random() * score);
-    if(exam <= 49){
-grade = exam
-        grade = 'F'
-    } else if(exam <= 69){
-        grade = exam
-        grade = 'D'
-    } else if(exam <= 79){
-        grade = exam
-        grade = 'C'
-    } else if(exam <= 89){
-        grade = exam
-        grade = 'B'
-    }
-    else if(exam <= 100){
-        grade = exam
-        grade = 'A'
     }

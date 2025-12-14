@@ -17,10 +17,10 @@ let isAccess = prompt("Ваш уровень доступа!?", '');
 let pass = prompt("У вас есть специальное разрешение?", '')
 
 if ((isAccess === isAdmin || isAccess === isVerifiedUser) && (pass === hasSpecialPermission || pass === hasTemporaryPass)) {
-    alert('Добро пожаловать!');
+    console.log('Hello');
 } else if ((isAccess === '' || isAccess === null) && (pass === '' || pass === null)) {
-    alert("Попробуйте снова!")
+    console.log('Try again, please!');
 } else {
-    alert('Охранааа!!!!')
+    console.log('Security')
 }
 console.log(isAccess);

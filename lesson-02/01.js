@@ -8,7 +8,7 @@
 */
 
 // тестовые данные (значения можно менять)
- const isAdmin = 'admin'
+    const isAdmin = 'admin'
     const isVerifiedUser = 'old'
     const hasSpecialPermission = 'vip'
     const hasTemporaryPass = 'user'
@@ -17,10 +17,10 @@
     let pass = prompt("У вас есть специальное разрешение?", '')
 
     if ((isAccess === isAdmin || isAccess === isVerifiedUser) && (pass === hasSpecialPermission || pass === hasTemporaryPass)) {
-       alert(`Hello ${isAccess} you have a ${pass}` );
+        console.log(`Hello ${isAccess} you have a ${pass}` );
     } else if ((isAccess === '' || isAccess === null) && (pass === '' || pass === null)) {
-       alert(`Try again, please!`);
+        console.log(`Try again, please!`);
     } else {
-        alert('Security')
+        console.log('Security')
     }
     console.log(isAccess);

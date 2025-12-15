@@ -21,7 +21,7 @@ const permission = (pass === hasTemporaryPass) || (pass === hasSpecialPermission
 let isAccess = role && permission
 if (isAccess) {
     console.log(`Hello ${Access} you have a ${pass}`);
-} else if ((Access !== isAdmin && Access !== isVerifiedUser) && (pass !== hasTemporaryPass && pass !== hasSpecialPermission)) {
+} else if ((Access === '' && pass === '') ) {
     console.log(`Try again, please!`);
 } else {
     console.log('Security')

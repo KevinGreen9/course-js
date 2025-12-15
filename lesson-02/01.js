@@ -13,13 +13,16 @@ const isVerifiedUser = 'old'
 const hasSpecialPermission = 'vip'
 const hasTemporaryPass = 'user'
 
-let isAccess = prompt("Ваш уровень доступа!?", '');
+let Access = prompt("Ваш уровень доступа!?", '');
 let pass = prompt("У вас есть специальное разрешение?", '')
 
-if ((isAccess === isAdmin || isAccess === isVerifiedUser) && (pass === hasSpecialPermission || pass === hasTemporaryPass)) {
-    console.log('Hello');
-} else if ((isAccess === '' || isAccess === null) && (pass === '' || pass === null)) {
-    console.log('Try again, please!');
+const role = (Access === isAdmin) || (Access === isVerifiedUser);
+const permission = (pass === hasTemporaryPass) || (pass === hasSpecialPermission);
+let isAccess = role && permission
+if (isAccess) {
+    console.log(`Hello ${Access} you have a ${pass}`);
+} else if ((Access === '' || Access === null) && (pass === '' || pass === null)) {
+    console.log(`Try again, please!`);
 } else {
     console.log('Security')
 }

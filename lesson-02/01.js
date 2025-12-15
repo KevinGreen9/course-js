@@ -8,12 +8,11 @@
 */
 
 // тестовые данные (значения можно менять)
-      const isAdmin = 'admin'
-    const isVerifiedUser = 'old'
-    const hasSpecialPermission = 'vip'
-    const hasTemporaryPass = 'user'
+const isAdmin = 'admin'
+const isVerifiedUser = 'old'
+const hasSpecialPermission = 'vip'
+const hasTemporaryPass = 'user'
 
-<<<<<<< HEAD
 let Access = prompt("Ваш уровень доступа!?", '');
 let pass = prompt("У вас есть специальное разрешение?", '')
 
@@ -22,26 +21,9 @@ const permission = (pass === hasTemporaryPass) || (pass === hasSpecialPermission
 let isAccess = role && permission
 if (isAccess) {
     console.log(`Hello ${Access} you have a ${pass}`);
-} else if ((Access === '' || Access === null) && (pass === '' || pass === null)) {
+} else if ((Access !== isAdmin || Access !== isVerifiedUser) && (pass !== hasTemporaryPass || pass !== hasSpecialPermission)) {
     console.log(`Try again, please!`);
 } else {
     console.log('Security')
 }
 console.log(isAccess);
-=======
-    let Access = prompt("Ваш уровень доступа!?", '');
-    let pass = prompt("У вас есть специальное разрешение?", '')
-
-    const role = Access === isAdmin || Access === isVerifiedUser;
-    const permission = pass === hasTemporaryPass || pass === hasSpecialPermission;
-   let isAccess = role && permission
-    if (isAccess) {
-        console.log(`Hello ${Access} you have a ${pass}`);
-    } else if ((isAccess === '' || isAccess === null) && (pass === '' || pass === null)) {
-        console.log(`Try again, please!`);
-    } else {
-        console.log('Security')
-    }
-    console.log(isAccess);
-
->>>>>>> 6472fca6ee926431e93ad2f0c9c0d5693c4298b6

@@ -8,10 +8,10 @@
 */
 
 // тестовые данные (значения можно менять)
-    const isAdmin = 'admin'
-    const isVerifiedUser = 'old'
-    const hasSpecialPermission = 'vip'
-    const hasTemporaryPass = 'user'
+    const isAdmin = true
+    const isVerifiedUser = false
+    const hasSpecialPermission = true
+    const hasTemporaryPass = false
 
     let isAccess = prompt("Ваш уровень доступа!?", '');
     let pass = prompt("У вас есть специальное разрешение?", '')

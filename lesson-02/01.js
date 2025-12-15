@@ -16,8 +16,8 @@ const hasTemporaryPass = 'user'
 let Access = prompt("Ваш уровень доступа!?", '');
 let pass = prompt("У вас есть специальное разрешение?", '')
 
-const role = (Access === isAdmin) || (Access === isVerifiedUser);
-const permission = (pass === hasTemporaryPass) || (pass === hasSpecialPermission);
+const role = (Access === isAdmin) || (pass === hasSpecialPermission);
+const permission = (Access === isVerifiedUser) || (pass === hasTemporaryPass);
 let isAccess = role && permission
 if (isAccess) {
     console.log(`Hello ${Access} you have a ${pass}`);

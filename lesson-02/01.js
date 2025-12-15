@@ -8,19 +8,23 @@
 */
 
 // тестовые данные (значения можно менять)
-    const isAdmin = true
-    const isVerifiedUser = false
-    const hasSpecialPermission = true
-    const hasTemporaryPass = false
+      const isAdmin = 'admin'
+    const isVerifiedUser = 'old'
+    const hasSpecialPermission = 'vip'
+    const hasTemporaryPass = 'user'
 
-    let isAccess = prompt("Ваш уровень доступа!?", '');
+    let Access = prompt("Ваш уровень доступа!?", '');
     let pass = prompt("У вас есть специальное разрешение?", '')
 
-    if ((isAccess === isAdmin || isAccess === isVerifiedUser) && (pass === hasSpecialPermission || pass === hasTemporaryPass)) {
-        console.log(`Hello ${isAccess} you have a ${pass}` );
+    const role = Access === isAdmin || Access === isVerifiedUser;
+    const permission = pass === hasTemporaryPass || pass === hasSpecialPermission;
+   let isAccess = role && permission
+    if (isAccess) {
+        console.log(`Hello ${Access} you have a ${pass}`);
     } else if ((isAccess === '' || isAccess === null) && (pass === '' || pass === null)) {
         console.log(`Try again, please!`);
     } else {
         console.log('Security')
     }
     console.log(isAccess);
+

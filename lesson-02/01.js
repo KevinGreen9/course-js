@@ -18,6 +18,8 @@ let pass = prompt("У вас есть специальное разрешени�
 
 let isAccess =
     (Access === isAdmin && pass === hasSpecialPermission) ||
+    (Access === isVerifiedUser && pass === hasSpecialPermission) ||
+    (Access === isAdmin && pass === hasTemporaryPass) ||
     (Access === isVerifiedUser && pass === hasTemporaryPass);
 
 if (isAccess) {

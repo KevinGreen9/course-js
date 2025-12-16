@@ -23,8 +23,8 @@
 //   console.log('Не выигрышный дубль.')
 // }
 
-let dice1 = Math.floor(Math.random() * 7)// your code
-let dice2 = Math.floor(Math.random() * 7)// your code
+let dice1 = Math.floor(Math.random() * 6) + 1// your code
+let dice2 = Math.floor(Math.random() * 6) + 1// your code
 let isWinningDouble // your code
 
 if(( dice1 > 3) && (dice2 > 3) && (dice2 === dice1)){

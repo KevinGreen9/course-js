@@ -15,5 +15,20 @@ const game = {
     gold: 250,
     lumber: 100,
   },
-  addResource() {}
+  addResource(resource, amount) {
+    for ( let key in resource ) {
+      if( !game.resources[key] ) {
+        throw new Error("Invalid resource")
+      } else{
+        game.resources[key] += amount
+
+      }
+
+    }
+    return game.resources;
+  }
+
 }
+
+let result = game.addResource({gplda: 0}, 200);
+console.log(result)

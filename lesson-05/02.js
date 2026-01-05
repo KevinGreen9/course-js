@@ -35,4 +35,18 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery() {}
+function updateGallery(obj, prop, value) {
+  debugger;
+  for (let key in gallery) {
+    if(key === obj) {
+      obj[prop] += value
+    } else {
+      ;
+    }
+  }
+
+
+}
+
+let result = updateGallery(gallery, 'Bears in forest',  'leonardo');
+console.log(result);

@@ -18,7 +18,7 @@ const game = {
   addResource(resource, amount) {
     for ( let key in resource ) {
       if( !game.resources[key] ) {
-        throw new Error("Invalid resource")
+        console.log("Invalid resource")
       } else{
         game.resources[key] += amount
 

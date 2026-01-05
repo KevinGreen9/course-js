@@ -30,5 +30,5 @@ const game = {
 
 }
 
-let result = game.addResource({gplda: 0}, 200);
-console.log(result)
+// let result = game.addResource({gold: 0}, 200);
+// console.log(result)

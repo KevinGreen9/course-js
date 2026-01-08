@@ -36,17 +36,17 @@ const gallery = {
 }
 
 function updateGallery(obj, prop, value) {
-  debugger;
-  for (let key in gallery) {
-    if(key === obj) {
-      obj[prop] += value
-    } else {
-      ;
-    }
-  }
+
+ if(!obj[prop]){
+     obj[prop] = value;
+
+ }else {
+     obj[prop] += value;
+ }
+ return obj;
 
 
 }
 
-let result = updateGallery(gallery, 'Bears in forest',  'leonardo');
+let result = updateGallery(gallery, 'Starry Night','Vincent van Gogh,  1550');
 console.log(result);

@@ -41,7 +41,7 @@ function updateGallery(obj, prop, value) {
      obj[prop] = value;
 
  }else {
-     obj[prop] += value;
+     obj[prop] = value;
  }
  return obj;
 

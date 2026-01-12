@@ -24,10 +24,12 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
 function filter(array, callback) {
-    return  array.filter( a => a === callback );
+    return  array.filter(callback);
 
 }
 
 
-let result = filter ([1, 2, 3, 4, 5], (3,6) )
+let result = filter ([1, 2, 3, 4, 5], function (element, index){
+    return element;
+});
 console.log(result)

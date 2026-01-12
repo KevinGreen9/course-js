@@ -25,8 +25,11 @@ console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
 */
 
 function map(array, callback)  {
- return array.map(a => a === callback);
+ return array.map(callback);
 }
+let result = map([1, 2, 3, 4, 5], function (element, index) {
+ return element
+});
 
-let result = map([1, 2, 3, 4, 5], (1,4));
+
 console.log(result);

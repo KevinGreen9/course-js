@@ -4,11 +4,12 @@
  */
 
 function isNumeric(str) {
-  // your code
+    return Number.isFinite(Number(str)) ? true : false
 }
-
 // console.log(isNumeric("123")) // Ожидаемый результат: true
 // console.log(isNumeric("12.3")) // Ожидаемый результат: true
 // console.log(isNumeric("123abc")) // Ожидаемый результат: false
 // console.log(isNumeric("abc")) // Ожидаемый результат: false
 // console.log(isNumeric(" ")) // Ожидаемый результат: false
+ let result = isNumeric(123);
+console.log(result)

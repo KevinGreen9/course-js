@@ -33,11 +33,35 @@ let isTimerStarted = false
 let timerId
 
 startButton.addEventListener('click', () => {
-  let counter = 3
+    if (isTimerStarted) return
+    isTimerStarted = true
+    let counter = 3
+        timerId = setInterval(() => {
+                startButton.textContent = counter
+                counter--
+                if (counter < 0) {
+                    startButton.textContent = '🚀'
+                    clearInterval(timerId)
+                }
+        }, 1000)
 
-  // your code
+
+    // your code
 })
 
-cancelButton.addEventListener('click', () => {
-  // your code
+cancelButton.addEventListener('click', (e) => {
+    // your code
+    e.stopPropagation()
+    clearInterval(timerId)
+    countdownDisplay.textContent = 'Oтменено'
+
+setTimeout(() => {
+    startButton.textContent = 'Старт'
+    countdownDisplay.textContent = 'Готовы?'
+},1000)
+
+    isTimerStarted = false
+
 })
+
+

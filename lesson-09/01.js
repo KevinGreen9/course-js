@@ -69,13 +69,13 @@ clearCartButton.addEventListener('click', function () {
 
 // Твой код:
 
-cart.addEventListener('click', function (event) {
-if(event.target.id) {
-  cart.classList.add()
-}
-
-
-
-  messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
-
-})
+// cart.addEventListener('click', function (event) {
+// if(event.target.id) {
+//   cart.classList.add()
+// }
+//
+//
+//
+//   messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
+//
+// })

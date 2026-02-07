@@ -11,7 +11,7 @@
   - метод должен обновить отображение фильмов на странице
 
 2. Добавить обработчик события для удаления фильмов:
-  - в метода view.init добавить обработчик события на список фильмов
+  - в методе view.init добавить обработчик события на список фильмов
   - используя делегирование событий, обработать клик на кнопке удаления фильма
   - при клике на кнопку удаления, получить id фильма из родительского элемента и передать его в метод deleteMovie объекта controller
 
@@ -29,6 +29,13 @@ const model = {
     this.movies.push(newMovie)
     view.renderMovies(this.movies)
   },
+  deleteMovie(movieId) {
+    this.movies = this.movies.filter((movie) => movie.id !== movieId)
+
+      view.renderMovies(this.movies)
+    }
+
+
   // your code
 }
 
@@ -39,6 +46,7 @@ const view = {
     const form = document.querySelector('.form')
     const inputTitle = document.querySelector('.input-title')
     const inputDescription = document.querySelector('.input-description')
+    const ul = document.querySelector('.list')
 
     form.addEventListener('submit', function (event) {
       event.preventDefault()
@@ -50,6 +58,14 @@ const view = {
       inputDescription.value = ''
     })
 
+ul.addEventListener('click', (e) => {
+  e.preventDefault()
+ if(e.target.classList.contains('delete-button')){
+   const movieId = +e.target.parentElement.id
+   controller.deleteMovie(movieId)
+ }
+
+})
     // your code
   },
   renderMovies(movies) {
@@ -91,6 +107,10 @@ const controller = {
     }
   },
   // your code
+  deleteMovie(movieId) {
+    model.deleteMovie(movieId)
+    view.displayMessage('Фильм успешно удалён!')
+  }
 }
 
 function init() {
